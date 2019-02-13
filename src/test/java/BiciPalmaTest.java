@@ -15,7 +15,7 @@ public class BiciPalmaTest {
 
         estacion = new Estacion(1, "Manacor", 8);
         bicicleta = new Bicicleta(1);
-        tarjetaUsuario = new TarjetaUsuario(1, true);
+        tarjetaUsuario = new TarjetaUsuario("10001", true);
 
     }
 
@@ -33,7 +33,7 @@ public class BiciPalmaTest {
 
     @Test
     public void gettersTarjetaUsuarioTest() {
-        assertEquals(1, tarjetaUsuario.getId());
+        assertEquals("10001", tarjetaUsuario.getId());
         assertTrue(tarjetaUsuario.getActivada());
     }
 }

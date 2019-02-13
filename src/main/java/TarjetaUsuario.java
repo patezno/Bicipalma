@@ -2,19 +2,19 @@ public class TarjetaUsuario {
 
     // Atributos
 
-    private int id = 0;
+    private String id = "";
     private boolean activada = false;
 
     // Constructor
 
-    public TarjetaUsuario(int id, boolean activada) {
+    public TarjetaUsuario(String id, boolean activada) {
         this.id = id;
         this.activada = activada;
     }
 
     // Metodos
 
-    public int getId() {
+    public String getId() {
         return this.id;
     }
 
