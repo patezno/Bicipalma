@@ -31,4 +31,23 @@ public class Estacion {
         return this.numeroAnclajes;
     }
 
+    /*
+    public void checkStation() {
+    }
+
+    public String freeAnchorages() {
+    }
+
+    public void anchorBike(Bicicleta bicicleta) {
+    }
+
+    public void checkAnchorages() {
+    }
+
+    public String readUserCard(TarjetaUsuario tarjetaUsuario) {
+    }
+
+    public void removeBike(TarjetaUsuario tarjetaUsuario) {
+    }
+    */
 }
