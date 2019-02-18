@@ -4,13 +4,15 @@ public class Bicicleta {
 
     private int id = 0;
 
-    // Constructor
+    // Constructores
+
+    public Bicicleta() {}
 
     public Bicicleta(int id) {
         this.id = id;
     }
 
-    // Metodos
+    // Getter
 
     public int getId() {
         return this.id;

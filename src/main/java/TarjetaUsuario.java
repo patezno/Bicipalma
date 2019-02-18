@@ -5,14 +5,16 @@ public class TarjetaUsuario {
     private String id = "";
     private boolean activada = false;
 
-    // Constructor
+    // Constructores
+
+    public TarjetaUsuario() {}
 
     public TarjetaUsuario(String id, boolean activada) {
         this.id = id;
         this.activada = activada;
     }
 
-    // Metodos
+    // Getters
 
     public String getId() {
         return this.id;

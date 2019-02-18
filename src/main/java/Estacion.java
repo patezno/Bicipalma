@@ -9,7 +9,9 @@ public class Estacion {
     private int numeroAnclajes = 0;
     private ArrayList<Integer> anclajes = new ArrayList<Integer>();
 
-    // Constructor
+    // Constructores
+
+    public Estacion() {}
 
     public Estacion(int id, String direccion, int numeroAnclajes) {
         this.id = id;
@@ -17,7 +19,7 @@ public class Estacion {
         this.numeroAnclajes = numeroAnclajes;
     }
 
-    // Metodos
+    // Getters
 
     public int getId() {
         return this.id;
@@ -30,6 +32,8 @@ public class Estacion {
     public int getNumeroAnclajes() {
         return this.numeroAnclajes;
     }
+
+    // Metodos
 
     /*
     public void checkStation() {
