@@ -5,7 +5,7 @@ public class Estacion {
     // Atributos
 
     private int id = 0;
-    private String direccion = "";
+    private String direccion = null;
     private int numeroAnclajes = 0;
     private ArrayList<Integer> anclajes = new ArrayList<Integer>();
 
@@ -35,10 +35,11 @@ public class Estacion {
 
     // Metodos
 
-    /*
     public void checkStation() {
+        System.out.println("Anclajes libres: " + getNumeroAnclajes());
     }
-
+    
+    /*
     public String freeAnchorages() {
     }
 
