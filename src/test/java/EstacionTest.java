@@ -19,4 +19,9 @@ public class EstacionTest {
         assertEquals(8, estacion.getNumeroAnclajes());
     }
 
+    @Test
+    public void freeAnchorages() {
+        assertEquals(8, estacion.freeAnchorages());
+    }
+
 }

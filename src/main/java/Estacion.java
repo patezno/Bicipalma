@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Estacion {
 
@@ -7,7 +8,7 @@ public class Estacion {
     private int id = 0;
     private String direccion = null;
     private int numeroAnclajes = 0;
-    private ArrayList<Integer> anclajes = new ArrayList<Integer>();
+    private Bicicleta[] bicicletas;
 
     // Constructores
 
@@ -17,6 +18,7 @@ public class Estacion {
         this.id = id;
         this.direccion = direccion;
         this.numeroAnclajes = numeroAnclajes;
+        this.bicicletas = new Bicicleta[numeroAnclajes];
     }
 
     // Getters
@@ -30,19 +32,33 @@ public class Estacion {
     }
 
     public int getNumeroAnclajes() {
-        return this.numeroAnclajes;
+        return numeroAnclajes;
+    }
+
+    public Bicicleta[] getBicicletas() {
+        return bicicletas;
     }
 
     // Metodos
 
     public void checkStation() {
-        System.out.println("Anclajes libres: " + getNumeroAnclajes());
-    }
-    
-    /*
-    public String freeAnchorages() {
+        System.out.println("ID: " + getId() + "\n" + "Dirección: " + getDireccion() + "\n");
     }
 
+    public int freeAnchorages() {
+
+        int anclajesLibres = 0;
+
+        for (Bicicleta anclaje : this.bicicletas) {
+
+            if (anclaje == null) {
+                anclajesLibres++;
+            }
+        }
+        return anclajesLibres;
+    }
+
+    /*
     public void anchorBike(Bicicleta bicicleta) {
     }
 
