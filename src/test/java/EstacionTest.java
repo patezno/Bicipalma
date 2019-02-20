@@ -24,4 +24,17 @@ public class EstacionTest {
         assertEquals(8, estacion.freeAnchorages());
     }
 
+    @Test
+    public void anchorBike() {
+
+        int[] bicicletas = {291, 292, 293, 294};
+
+        for ( int id: bicicletas ){
+            Bicicleta bicicleta = new Bicicleta(id);
+            estacion.anchorBike(bicicleta);
+        }
+
+        assertEquals(4, estacion.freeAnchorages());
+    }
+
 }

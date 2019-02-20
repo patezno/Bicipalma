@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Estacion {
 
     // Atributos
@@ -42,7 +39,7 @@ public class Estacion {
     // Metodos
 
     public void checkStation() {
-        System.out.println("ID: " + getId() + "\n" + "Dirección: " + getDireccion() + "\n");
+        System.out.println("ID: " + getId() + "\n" + "Dirección: " + getDireccion());
     }
 
     public int freeAnchorages() {
@@ -58,10 +55,27 @@ public class Estacion {
         return anclajesLibres;
     }
 
-    /*
     public void anchorBike(Bicicleta bicicleta) {
+
+        int posicion = 0;
+
+        for (Bicicleta anclaje : this.bicicletas) {
+
+            if (anclaje == null) {
+                this.bicicletas[posicion] = bicicleta;
+                showBike(bicicleta, posicion + 1);
+                break;
+            } else {
+                posicion++;
+            }
+        }
+
     }
 
+    public void showBike(Bicicleta bicicleta, int anclaje) {
+        System.out.println("Bicicleta: " + bicicleta.getId() + " anclada en el anclaje: " + anclaje);
+    }
+    /*
     public void checkAnchorages() {
     }
 
