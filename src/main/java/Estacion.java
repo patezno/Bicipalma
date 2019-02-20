@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Estacion {
 
     // Atributos
@@ -75,14 +77,49 @@ public class Estacion {
     public void showBike(Bicicleta bicicleta, int anclaje) {
         System.out.println("Bicicleta: " + bicicleta.getId() + " anclada en el anclaje: " + anclaje);
     }
-    /*
+
     public void checkAnchorages() {
+
+        int posicion = 0;
+
+        for (Bicicleta bicicleta : bicicletas) {
+
+            posicion++;
+
+            if (bicicleta != null) {
+                System.out.println("Anclaje " + posicion + " " + bicicleta.getId());
+            } else {
+                System.out.println("Anclaje " + posicion + " libre");
+            }
+        }
     }
 
-    public String readUserCard(TarjetaUsuario tarjetaUsuario) {
+    public Boolean readUserCard(TarjetaUsuario tarjetaUsuario) {
+        return tarjetaUsuario.getActivada();
     }
 
     public void removeBike(TarjetaUsuario tarjetaUsuario) {
+
+        if (readUserCard(tarjetaUsuario)) {
+            boolean isBikeRemoved = false;
+
+            while (!isBikeRemoved) {
+
+                int posicion = generateAnchor();
+
+                if (this.bicicletas[posicion] != null) {
+                    showBike(this.bicicletas[posicion], numeroAnclajes);
+                    this.bicicletas[posicion] = null;
+                    isBikeRemoved = true;
+                }
+            }
+        }
     }
-    */
+
+    public int generateAnchor() {
+        Random random = new Random();
+        int anclaje = random.nextInt(this.bicicletas.length);
+        return anclaje;
+    }
+
 }

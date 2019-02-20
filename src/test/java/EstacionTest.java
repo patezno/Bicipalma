@@ -25,7 +25,7 @@ public class EstacionTest {
     }
 
     @Test
-    public void anchorBike() {
+    public void anchorBikeTest() {
 
         int[] bicicletas = {291, 292, 293, 294};
 
@@ -35,6 +35,25 @@ public class EstacionTest {
         }
 
         assertEquals(4, estacion.freeAnchorages());
+    }
+
+    @Test
+    public void removeBikeTest() {
+
+        int[] bicicletas = {291, 292, 293, 294};
+
+        for ( int id: bicicletas ){
+            Bicicleta bicicleta = new Bicicleta(id);
+            estacion.anchorBike(bicicleta);
+        }
+
+        TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("000456789", true);
+
+        estacion.removeBike(tarjetaUsuario);
+
+        assertEquals(5, estacion.freeAnchorages());
+
+
     }
 
 }
